@@ -6,7 +6,9 @@ sudo nix-channel --update
 
 ssh-keygen  # then, add to Github
 
-nix-shell -p git
+sudo nixos-rebuild switch
 
-git clone https://codeberg.com/bryan-melanson/dotfiles.git $HOME/dotfiles
+# Install home manager
+
+home-manager switch
 ```
