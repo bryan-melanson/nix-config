@@ -5,4 +5,8 @@ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/rel
 sudo nix-channel --update
 
 ssh-keygen  # then, add to Github
+
+# Install home manager
+
+home-manager switch
 ```
