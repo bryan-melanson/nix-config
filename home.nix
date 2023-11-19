@@ -21,6 +21,9 @@ in
     pkgs.feh
     pkgs.alacritty
     pkgs.polybar
+    pkgs.picom
+    pkgs.brave
+    pkgs.rofi
 
     (pkgs.writeShellScriptBin "esp-shell" ''
 	nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf

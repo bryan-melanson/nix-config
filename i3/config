@@ -52,7 +52,7 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 bindsym $mod+Shift+Return exec brave
 
@@ -172,8 +172,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-exec_always --no-startup-id xrandr --output HDMI-A-0 --auto --right-of HDMI-1-0
-
 exec_always --no-startup-id picom -f
 
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh --blocks
@@ -182,10 +180,6 @@ exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
 exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
-
-for_window [class="kitty"] move to workspace $ws1
-for_window [class="Brave-browser"] move to workspace $ws2
-for_window [class="thunderbird"] move to workspace $ws3
 
 bindsym $mod+r mode "resize"
 
