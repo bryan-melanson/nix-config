@@ -6,6 +6,8 @@ sudo nix-channel --update
 
 ssh-keygen  # then, add to Github
 
+sudo nixos-rebuild switch
+
 # Install home manager
 
 home-manager switch
