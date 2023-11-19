@@ -58,6 +58,9 @@ in
 	  ".config/polybar" = {
 	    source = "${dotfilesRepo}/polybar";
 	  };
+    ".config/i3" = {
+	    source = "${dotfilesRepo}/i3";
+	  };
     "wallpaper" = {
       source = builtins.fetchGit {
         url = "https://github.com/bryan-melanson/wallpaper.git";
