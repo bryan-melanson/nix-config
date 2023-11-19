@@ -174,7 +174,7 @@ mode "resize" {
 
 exec_always --no-startup-id picom -f
 
-exec_always --no-startup-id bash ~/.config/polybar/launch.sh --blocks
+exec_always --no-startup-id polybar
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
