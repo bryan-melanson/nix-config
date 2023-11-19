@@ -20,6 +20,7 @@ in
     pkgs.gcc
     pkgs.feh
     pkgs.alacritty
+    pkgs.polybar
 
     (pkgs.writeShellScriptBin "esp-shell" ''
 	nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
