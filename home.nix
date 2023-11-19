@@ -2,8 +2,12 @@
 let
   dotfilesRepo = builtins.fetchGit {
     url = "https://github.com/bryan-melanson/dotfiles.git";
-    ref = "master";
-};
+    rev = "6d676d4ab43273807785c77afec04e4cccedfba1";
+  };
+  wallpaperRepo = builtins.fetchGit {
+    url = "https://github.com/bryan-melanson/wallpaper.git";
+    rev = "84097280717a4d44905a08917d754e8c5033eff0";
+  };
 in
 {
   home.username = "bryan";
