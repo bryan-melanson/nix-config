@@ -8,5 +8,5 @@ ssh-keygen  # then, add to Github
 
 nix-shell -p git
 
-git clone https://codeberg.com/bryan-melanson/dotfiles.git $HOME/dotfiles
+git clone https://github.com/bryan-melanson/dotfiles.git $HOME/dotfiles
 ```
