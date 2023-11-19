@@ -174,7 +174,12 @@ mode "resize" {
 
 exec_always --no-startup-id picom -f
 
-exec_always polybar
+set $first_run 1
+
+if ($first_run) {
+  exec --no-startup-id polybar
+  set $first_run 0
+}
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
