@@ -5,8 +5,4 @@ sudo nix-channel --add https://github.com/nix-community/home-manager/archive/rel
 sudo nix-channel --update
 
 ssh-keygen  # then, add to Github
-
-nix-shell -p git
-
-git clone https://github.com/bryan-melanson/dotfiles.git $HOME/dotfiles
 ```
