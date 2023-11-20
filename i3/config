@@ -176,10 +176,7 @@ exec_always --no-startup-id picom -f
 
 set $first_run 1
 
-if ($first_run) {
-  exec --no-startup-id polybar
-  set $first_run 0
-}
+exec polybar
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
