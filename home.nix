@@ -22,7 +22,7 @@ in
     pkgs.alacritty
     pkgs.polybar
     pkgs.picom
-    pkgs.brave
+    pkgs.firefox
     pkgs.rofi
 
     (pkgs.writeShellScriptBin "esp-shell" ''
