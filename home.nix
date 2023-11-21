@@ -62,9 +62,9 @@ in
 	  ".config/polybar" = {
 	    source = "${dotfilesRepo}/polybar";
 	  };
-	  ".config/alacritty" = {
-	    source = "${dotfilesRepo}/alacritty";
-	  };
+	  #".config/alacritty" = {
+	  #  source = "${dotfilesRepo}/alacritty";
+	  #};
           ".config/i3" = {
 	    source = "${dotfilesRepo}/i3";
 	  };
