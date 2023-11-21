@@ -55,6 +55,13 @@ in
     };
   };
 
+  programs.alacritty = {
+    enable = true;
+    settings = {
+    	font.size = 13;
+    };
+  };
+
   home.file = {
    	".config/nvim" = {
 	    source = "${dotfilesRepo}/nvim";
