@@ -18,9 +18,9 @@ window:
   #
   # Specified in number of columns/lines, not pixels. If both are zero this
   # setting is ignored.
-  dimensions:
-    columns: 100
-    lines: 85
+  #dimensions:
+    #columns: 100
+    #lines: 85
 
   # Window padding (changes require restart)
   #
@@ -51,7 +51,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  # startup_mode: Windowed
 
   # Background opacity
   opacity: 1.0
@@ -70,7 +70,7 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Iosevka
+    family: JetBrainsMono
     style: Light
     # family: "Fira Code"
     # family: "Source Code Pro"
@@ -78,14 +78,14 @@ font:
 
   # The bold font face
   bold:
-    family: Iosevka
+    family: JetBrainsMono
     style: Medium
     # family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: Iosevka
+    family: JetBrainsMono
     style: "Light Italic"
     # style: "Light Oblique"
     # family: "Fira Code"
@@ -493,9 +493,9 @@ debug:
 #
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
-shell:
-  program: /usr/local/bin/fish
-  args:
-    - --command=tmux
+#shell:
+  #program: /usr/local/bin/fish
+  #args:
+  #  - --command=tmux
 
 # vim: nospell
