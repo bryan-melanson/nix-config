@@ -2,7 +2,7 @@
 let
   dotfilesRepo = builtins.fetchGit {
     url = "https://github.com/bryan-melanson/dotfiles.git";
-    rev = "92f95142fa42d51c30c22a9b48e14d48ce487c36";
+    rev = "36e02ec0ad535aafba824e98c7e54ee649f24b85";
   };
 in
 {
