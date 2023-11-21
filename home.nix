@@ -62,7 +62,10 @@ in
 	  ".config/polybar" = {
 	    source = "${dotfilesRepo}/polybar";
 	  };
-    ".config/i3" = {
+	  ".config/alacritty" = {
+	    source = "${dotfilesRepo}/alacritty";
+	  };
+          ".config/i3" = {
 	    source = "${dotfilesRepo}/i3";
 	  };
     "wallpaper" = {
