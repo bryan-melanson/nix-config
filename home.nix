@@ -62,9 +62,9 @@ in
     size = 12.0;
     use_thin_strokes = true;
 
-    normal.family = "JetBrainsMono Nerd Font";
-    bold.family = "JetBrainsMono Nerd Font";
-    italic.family = "JetBrainsMono Nerd Font";
+    normal.family = "JetBrainsMono";
+    bold.family = "JetBrainsMono";
+    italic.family = "JetBrainsMono";
   };
 
   cursor.style = "Beam";
