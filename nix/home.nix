@@ -57,10 +57,10 @@ in
 	programs.kitty = {
 		enable = true;
 		extraConfig = {
-			font_family = JetBrains Mono Medium;
-			bold_font = JetBrains Mono Bold;
-			italic_font = JetBrains Mono Italic;
-			bold_italic_font = JetBrains Mono Bold Italic;
+			font_family = "JetBrains Mono Medium";
+			bold_font = "JetBrains Mono Bold";
+			italic_font = "JetBrains Mono Italic";
+			bold_italic_font = "JetBrains Mono Bold Italic";
 			font_size = 14.0;
 		};
 		theme = "Dracula";
