@@ -2,7 +2,7 @@
 let
 	dotfilesRepo = builtins.fetchGit {
 		url = "https://github.com/bryan-melanson/nix-config.git";
-		rev = "cb69cbd41d15e666c63a392117fe7853626bdab2";
+		rev = "0e9b10d7c5e5b9b3f5202e2e700e9a634add77de";
 	};
 in
 {
