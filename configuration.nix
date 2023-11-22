@@ -36,7 +36,6 @@
 
   # Enable the Cinnamon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  # services.xserver.desktopManager.cinnamon.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
   # Configure keymap in X11
@@ -88,15 +87,8 @@
   environment.systemPackages = with pkgs; [
      neovim
      wget
+     git
   ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   nix = {
     package = pkgs.nixFlakes;
