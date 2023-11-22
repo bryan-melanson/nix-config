@@ -56,7 +56,7 @@ in
 
 	programs.kitty = {
 		enable = true;
-		extraConfig = {
+		settings = {
 			font_family = "JetBrains Mono Medium";
 			bold_font = "JetBrains Mono Bold";
 			italic_font = "JetBrains Mono Italic";
