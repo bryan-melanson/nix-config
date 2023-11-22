@@ -52,9 +52,9 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec --no-startup-id firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -177,8 +177,6 @@ exec_always --no-startup-id picom -f
 set $first_run 1
 
 exec --no-startup-id polybar
-
-exec --no-startup-id xrandr -s 1440x810
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
