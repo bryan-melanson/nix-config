@@ -177,7 +177,7 @@ exec_always --no-startup-id picom -f
 set $first_run 1
 
 exec --no-startup-id polybar
-
+exec --no-startup-id xrandr -s 1920x1080 --dpi 80
 exec_always --no-startup-id feh --randomize --bg-scale ~/wallpaper/*
 
 exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
