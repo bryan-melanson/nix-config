@@ -54,16 +54,9 @@ in
 		};
 	};
 
-	programs.kitty = {
+	programs.termite = {
 		enable = true;
-		settings = {
-			font_family = "JetBrains Mono Medium";
-			bold_font = "JetBrains Mono Bold";
-			italic_font = "JetBrains Mono Italic";
-			bold_italic_font = "JetBrains Mono Bold Italic";
-			font_size = 14;
-		};
-		theme = "Dracula";
+		font = "JetBrainsMono Nerd Font 13";
 	};
 
 	home.file = {
