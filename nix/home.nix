@@ -116,8 +116,8 @@ in
 			source = builtins.fetchGit {
 				url = "https://github.com/bryan-melanson/wallpaper.git";
 				ref = "master";
-		};
-		target = "${config.home.homeDirectory}/wallpaper";
+			};
+			target = "${config.home.homeDirectory}/wallpaper";
 		};
 	};
 
