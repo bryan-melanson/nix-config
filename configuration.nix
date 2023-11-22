@@ -74,10 +74,6 @@
     extraGroups = [ "networkmanager" "tty" "dialout" "wheel" ];
   };
 
-  programs.zsh.enable = true;
-
-  users.defaultUserShell = pkgs.zsh;
-
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "bryan";
