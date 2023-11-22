@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 let
   dotfilesRepo = builtins.fetchGit {
-    url = "https://github.com/bryan-melanson/dotfiles.git";
-    rev = "2d9f04c8db8ee7ac47488999ddd5b8a56c49d0db";
+    url = "https://github.com/bryan-melanson/nix-config.git";
+    rev = "390bff7ce35beedceab730171dd964ebf55beb8b";
   };
 in
 {
@@ -109,16 +109,13 @@ in
 
   home.file = {
    	".config/nvim" = {
-	    source = "${dotfilesRepo}/nvim";
+	    source = "${dotfilesRepo}/dotfiles/nvim";
 	  };
 	  ".config/polybar" = {
-	    source = "${dotfilesRepo}/polybar";
+	    source = "${dotfilesRepo}/dotfiles/polybar";
 	  };
-	  #".config/alacritty" = {
-	  #  source = "${dotfilesRepo}/alacritty";
-	  #};
-          ".config/i3" = {
-	    source = "${dotfilesRepo}/i3";
+    ".config/i3" = {
+	    source = "${dotfilesRepo}/dotfiles/i3";
 	  };
     "wallpaper" = {
       source = builtins.fetchGit {
