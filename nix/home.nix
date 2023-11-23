@@ -60,7 +60,7 @@ in
 	programs.termite = {
 		enable = true;
 		font = "JetBrainsMono Nerd Font 10";
-		backgroundColor = "#0c0d0e";
+		backgroundColor = "rgba(8, 0, 23, 0.95)";
 		foregroundColor = "#b7b8b9";
 		foregroundBoldColor = "#dadbdc";
 		cursorColor = "#dadbdc";
