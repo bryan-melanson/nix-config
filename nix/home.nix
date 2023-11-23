@@ -60,54 +60,51 @@ in
 	programs.termite = {
 		enable = true;
 		font = "JetBrainsMono Nerd Font 10";
-		backgroundColor = "rgba(8, 0, 23, 0.95)";
-		foregroundColor = "#b7b8b9";
-		foregroundBoldColor = "#dadbdc";
-		cursorColor = "#dadbdc";
+		backgroundColor = "#1d1f21";
+		foregroundColor = "#c5c8c6";
+		foregroundBoldColor = "#c5c8c6";
+		cursorColor = "#c5c8c6";
 		colorsExtra = ''
-			# Black, Gray, Silver, White
-			color0  = "#0c0d0e"
-			color8  = "#737475"
-			color7  = "#b7b8b9"
-			color15 = "#fcfdfe"
-			
-			# Red
-			color1  = "#e31a1c"
-			color9  = "#e31a1c"
-			
-			# Green
-			color2  = "#31a354"
-			color10 = "#31a354"
-			
-			# Yellow
-			color3  = "#dca060"
-			color11 = "#dca060"
-			
-			# Blue
-			color4  = "#3182bd"
-			color12 = "#3182bd"
-			# Purple
-			color5  = "#756bb1"
-			color13 = "#756bb1"
-			
-			# Teal
-			color6  = "#80b1d3"
-			color14 = "#80b1d3"
-			
-			# Extra colors
-			color15 = "#fcfdfe"
-			color16 = "#e6550d"
-			color17 = "#b15928"
-			color18 = "#2e2f30"
-			color19 = "#515253"
-			color20 = "#959697"
-			color21 = "#dadbdc"
+      # black
+color0  = #282a2e
+color8  = #373b41
+
+# red
+color1  = #a54242
+color9  = #cc6666
+
+# green
+color2  = #8c9440
+color10 = #b5bd68
+
+# yellow
+color3  = #de935f
+color11 = #f0c674
+
+# blue
+color4  = #5f819d
+color12 = #81a2be
+
+# magenta
+color5  = #85678f
+color13 = #b294bb
+
+# cyan
+color6  = #5e8d87
+color14 = #8abeb7
+
+# white
+color7  = #707880
+color15 = #c5c8c6
 		'';
 	};
 
 	home.file = {
 		".config/nvim" = {
 		    source = "${dotfilesRepo}/dotfiles/nvim";
+		  };
+		".config/polybar" = {
+		    source = "${dotfilesRepo}/dotfiles/polybar";
 		  };
 		".config/i3" = {
 		    source = "${dotfilesRepo}/dotfiles/i3";
