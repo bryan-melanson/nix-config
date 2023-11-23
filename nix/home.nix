@@ -23,6 +23,9 @@ in
 		pkgs.picom
 		pkgs.firefox
 		pkgs.rofi
+    pkgs.nodejs
+    pkgs.xclip
+    pkgs.tree-sitter
 
 		(pkgs.writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
