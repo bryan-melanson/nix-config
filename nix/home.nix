@@ -2,7 +2,7 @@
 let
 	dotfilesRepo = builtins.fetchGit {
 		url = "https://github.com/bryan-melanson/nix-config.git";
-		rev = "fca3eda6a714bc078803c77efce0ceae74ebdd95";
+		rev = "330e07ae83d5e5466a2b3d9cfe1a8262e8dbf8ba";
 	};
 in
 {
@@ -26,6 +26,7 @@ in
     pkgs.nodejs
     pkgs.xclip
     pkgs.tree-sitter
+    pkgs.python311
 
 		(pkgs.writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
@@ -60,7 +61,7 @@ in
 	programs.termite = {
 		enable = true;
 		font = "JetBrainsMono Nerd Font 10";
-		backgroundColor = "#1d1f21";
+		backgroundColor = "rbga(8, 0, 23, 0.4)";
 		foregroundColor = "#c5c8c6";
 		foregroundBoldColor = "#c5c8c6";
 		cursorColor = "#c5c8c6";
