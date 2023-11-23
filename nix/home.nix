@@ -109,9 +109,6 @@ in
 		".config/nvim" = {
 		    source = "${dotfilesRepo}/dotfiles/nvim";
 		  };
-		".config/polybar" = {
-		    source = "${dotfilesRepo}/dotfiles/polybar";
-		  };
 		".config/i3" = {
 		    source = "${dotfilesRepo}/dotfiles/i3";
 		  };
