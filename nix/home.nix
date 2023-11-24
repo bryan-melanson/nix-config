@@ -61,42 +61,42 @@ in
 	programs.termite = {
 		enable = true;
 		font = "JetBrainsMono Nerd Font 12";
-		backgroundColor = "rbga(8, 0, 23, 0.4)";
-		foregroundColor = "#c5c8c6";
-		foregroundBoldColor = "#c5c8c6";
-		cursorColor = "#c5c8c6";
+		backgroundColor = "#1e1e1e";
+		foregroundColor = "#a7a7a7";
+		foregroundBoldColor = "#a7a7a7";
+		cursorColor = "#a7a7a7";
 		colorsExtra = ''
-      # black
-color0  = #282a2e
-color8  = #373b41
+# black
+color0  = #1e1e1e
+color8  = #5f5a60
 
 # red
-color1  = #a54242
-color9  = #cc6666
+color1  = #cf6a4c
+color9  = #cf6a4c
 
 # green
-color2  = #8c9440
-color10 = #b5bd68
+color2  = #8f9d6a
+color10 = #8f9d6a
 
 # yellow
-color3  = #de935f
-color11 = #f0c674
+color3  = #f9ee98
+color11 = #f9ee98
 
 # blue
-color4  = #5f819d
-color12 = #81a2be
+color4  = #7587a6
+color12 = #7587a6
 
 # magenta
-color5  = #85678f
-color13 = #b294bb
+color5  = #9b859d
+color13 = #9b859d
 
 # cyan
-color6  = #5e8d87
-color14 = #8abeb7
+color6  = #afc4db
+color14 = #afc4db
 
 # white
-color7  = #707880
-color15 = #c5c8c6
+color7  = #a7a7a7
+color15 = #ffffff
 		'';
 	};
 
