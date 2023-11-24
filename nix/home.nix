@@ -11,24 +11,26 @@ in
 
   	home.stateVersion = "23.05"; # Please read the comment before changing.
 
-	home.packages = [
-		(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-		pkgs.lazygit
-		pkgs.ripgrep
-		pkgs.fd
-		pkgs.gcc
-		pkgs.feh
-		pkgs.termite
-		pkgs.polybar
-		pkgs.picom
-		pkgs.firefox
-		pkgs.rofi
-    pkgs.nodejs
-    pkgs.xclip
-    pkgs.tree-sitter
-    pkgs.python311
+	home.packages = with pkgs; [
+		(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+		lazygit
+		ripgrep
+		fd
+		gcc
+		feh
+		termite
+		polybar
+		picom
+		firefox
+		rofi
+		nodejs
+		xclip
+		tree-sitter
+		python311
+		unzip
+		cargo
 
-		(pkgs.writeShellScriptBin "esp-shell" ''
+		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
 		'')
 	];
