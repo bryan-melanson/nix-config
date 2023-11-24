@@ -63,8 +63,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 
 # A more modern dmenu replacement is rofi:
-bindcode $mod+Shift+40 exec "rofi -modi drun,run -show drun"
-bindcode $mod+40 exec "bash ~/.config/polybar/blocks/scripts/launcher.sh &"
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 # change focus
 bindsym $mod+j focus left
