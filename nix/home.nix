@@ -27,18 +27,21 @@ in
 		xclip
 		tree-sitter
 		python311
+		python311Packages.pip
 		unzip
+		luarocks
 		cargo
-    killall
-    xorg.xmodmap
+		killall
+		xorg.xmodmap
 		vscode
-    gnumake
+		gnumake
+		glibc
 
 		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
 		'')
 	];
- 
+
 	home.sessionVariables = {
 		EDITOR = "nvim";
 	};
@@ -64,6 +67,31 @@ in
 		};
 	};
 
+	programs.neovim = {
+    enable = true;
+  	defaultEditor = true;
+	  viAlias = true;
+	  vimAlias = true;
+		plugins = with pkgs.vimPlugins; [
+      telescope-nvim
+      telescope-cheat-nvim
+      zen-mode-nvim
+      nvim-lspconfig
+      nvim-treesitter.withAllGrammars
+      plenary-nvim
+      which-key-nvim
+      trouble-nvim
+      mini-nvim
+			nvim-tree-lua {
+				plugin = pkgs.vimPlugins.vim-startify;
+				config = "let g:startify_change_to_vcs_root = 0";
+			}
+		];
+		extraConfig = ''
+    	set number relativenumber
+ 		'';
+	};
+
 	programs.termite = {
 		enable = true;
 		font = "JetBrainsMono Nerd Font 12";
@@ -72,44 +100,41 @@ in
 		foregroundBoldColor = "#a7a7a7";
 		cursorColor = "#a7a7a7";
 		colorsExtra = ''
-# black
-color0  = #1e1e1e
-color8  = #5f5a60
+			# black
+			color0  = #1e1e1e
+			color8  = #5f5a60
 
-# red
-color1  = #cf6a4c
-color9  = #cf6a4c
+			# red
+			color1  = #cf6a4c
+			color9  = #cf6a4c
 
-# green
-color2  = #8f9d6a
-color10 = #8f9d6a
+			# green
+			color2  = #8f9d6a
+			color10 = #8f9d6a
 
-# yellow
-color3  = #f9ee98
-color11 = #f9ee98
+			# yellow
+			color3  = #f9ee98
+			color11 = #f9ee98
 
-# blue
-color4  = #7587a6
-color12 = #7587a6
+			# blue
+			color4  = #7587a6
+			color12 = #7587a6
 
-# magenta
-color5  = #9b859d
-color13 = #9b859d
+			# magenta
+			color5  = #9b859d
+			color13 = #9b859d
 
-# cyan
-color6  = #afc4db
-color14 = #afc4db
+			# cyan
+			color6  = #afc4db
+			color14 = #afc4db
 
-# white
-color7  = #a7a7a7
-color15 = #ffffff
+			# white
+			color7  = #a7a7a7
+			color15 = #ffffff
 		'';
 	};
 
 	home.file = {
-		".config/nvim" = {
-		    source = "${dotfilesRepo}/dotfiles/nvim";
-		  };
 		".config/i3" = {
 		    source = "${dotfilesRepo}/dotfiles/i3";
 		  };
@@ -122,12 +147,12 @@ color15 = #ffffff
 		};
 	};
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
-    };
-  };
+	nixpkgs = {
+		config = {
+			allowUnfree = true;
+			allowUnfreePredicate = (_: true);
+		};
+	};
 
 	programs.home-manager.enable = true;
 }
