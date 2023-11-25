@@ -39,6 +39,7 @@ in
 		vscode
 		gnumake
 		glibc
+    lua
 
 		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
@@ -75,37 +76,71 @@ in
   	defaultEditor = true;
 	  viAlias = true;
 	  vimAlias = true;
-    coc = {
-      enable = true;
-    };
     extraLuaPackages = luaPkgs: with luaPkgs; [ luautf8 ];
     extraPython3Packages = pyPkgs: with pyPkgs; [ python-lsp-server ];
 		plugins = with pkgs.vimPlugins; [
-      vim-airline
-      vim-nix
-      telescope-nvim
-      telescope-cheat-nvim
-      zen-mode-nvim
-      nvim-lspconfig
-      nvim-treesitter.withAllGrammars
-      plenary-nvim
-      which-key-nvim
-      trouble-nvim
+      # Appearance
+      vim-table-mode # vimscript
+      indentLine  # vimscript
+      indent-blankline-nvim
+      barbar-nvim
+      nvim-tree-lua
+      nvim-web-devicons
+      # vim-airline
+      feline-nvim
+      # lualine-nvim
+      one-nvim
       oceanic-material
-      mini-nvim
-			nvim-tree-lua {
-				plugin = pkgs.vimPlugins.vim-startify;
-				config = "let g:startify_change_to_vcs_root = 0";
-			}
-		];
-		extraConfig = ''
+
+      # Programming
+      vim-which-key          # vimscript
+      vim-haskellConcealPlus # vimscript
+      vim-nix                # vimscript
+      lspkind-nvim
+      nvim-treesitter.withAllGrammars
+      nvim-treesitter-refactor
+      nvim-treesitter-textobjects
+      nvim-lspconfig
+      #nvim-lsp-saga
+      nvim-compe
+      vim-vsnip
+      vim-vsnip-integ
+      #nvim-rust-tools
+
+      # Text objects
+      tcomment_vim    # vimscript
+      vim-surround    # vimscript
+      vim-repeat      # vimscript
+      nvim-autopairs
+
+      # Git
+      vim-fugitive  # vimscript
+      vim-gitgutter # vimscript
+
+      # DAP
+      vimspector # vimscript
+
+      # Fuzzy Finder
+      telescope-nvim
+
+      # General Deps
+      popup-nvim
+      plenary-nvim
+      zen-mode-nvim
+    ];
+    extraLuaConfig =
+      ''
+        require('feline').setup()
+      '';
+    extraConfig =
+      ''
       colorscheme oceanic_material
       set background=dark
       let g:context_nvim_no_redraw = 1
       set mouse=a
       set termguicolors
     	set number relativenumber
- 		'';
+   	  '';
 	};
 
 	programs.termite = {
