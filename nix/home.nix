@@ -6,9 +6,12 @@ let
 	};
 in
 {
+  xresources.properties = {
+    "Xft.dpi" = 80;
+  };
+
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
-
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
 	home.packages = with pkgs; [
@@ -72,7 +75,14 @@ in
   	defaultEditor = true;
 	  viAlias = true;
 	  vimAlias = true;
+    coc = {
+      enable = true;
+    };
+    extraLuaPackages = luaPkgs: with luaPkgs; [ luautf8 ];
+    extraPython3Packages = pyPkgs: with pyPkgs; [ python-lsp-server ];
 		plugins = with pkgs.vimPlugins; [
+      vim-airline
+      vim-nix
       telescope-nvim
       telescope-cheat-nvim
       zen-mode-nvim
@@ -81,6 +91,7 @@ in
       plenary-nvim
       which-key-nvim
       trouble-nvim
+      oceanic-material
       mini-nvim
 			nvim-tree-lua {
 				plugin = pkgs.vimPlugins.vim-startify;
@@ -88,6 +99,11 @@ in
 			}
 		];
 		extraConfig = ''
+      colorscheme oceanic_material
+      set background=dark
+      let g:context_nvim_no_redraw = 1
+      set mouse=a
+      set termguicolors
     	set number relativenumber
  		'';
 	};
