@@ -59,7 +59,7 @@ in
 			update = "sudo nixos-rebuild switch";
 			config = "git --git-dir=$HOME/.cfg/ --work-tree=$HOME";
 		};
-		enableAutosuggestions  = true;
+		enableAutosuggestions = true;
 		oh-my-zsh = {
 			enable = true;
 			plugins = [ "git" ];
@@ -135,9 +135,9 @@ in
 	};
 
 	home.file = {
-		".config/i3" = {
+    ".config/i3" = {
 		    source = "${dotfilesRepo}/dotfiles/i3";
-		  };
+		};
 		"wallpaper" = {
 			source = builtins.fetchGit {
 				url = "https://github.com/bryan-melanson/wallpaper.git";
