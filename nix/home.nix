@@ -9,7 +9,7 @@ in
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
 
-  	home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "23.05"; # Please read the comment before changing.
 
 	home.packages = with pkgs; [
 		(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -29,15 +29,16 @@ in
 		python311
 		unzip
 		cargo
-    		killall
-    		xorg.xmodmap
+    killall
+    xorg.xmodmap
 		vscode
+    gnumake
 
 		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
 		'')
 	];
-
+ 
 	home.sessionVariables = {
 		EDITOR = "nvim";
 	};
@@ -120,6 +121,13 @@ color15 = #ffffff
 			target = "${config.home.homeDirectory}/wallpaper";
 		};
 	};
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
 
 	programs.home-manager.enable = true;
 }
