@@ -32,14 +32,11 @@ in
 		python311
 		python311Packages.pip
 		unzip
-		luarocks
 		cargo
 		killall
 		xorg.xmodmap
-		vscode
 		gnumake
 		glibc
-		lua
 		tmux
 		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
