@@ -1,21 +1,10 @@
 { config, pkgs, ... }:
-let
-	dotfilesRepo = builtins.fetchGit {
-		url = "https://github.com/bryan-melanson/dotfiles.git";
-		ref = "main";
-	};
-in
 {
-  xresources.properties = {
-    "Xft.dpi" = 80;
-  };
-
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
 	home.stateVersion = "23.05"; # Please read the comment before changing.
 	
 	home.packages = with pkgs; [
-		(nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 		lazygit
 		ripgrep
 		fd
@@ -37,8 +26,6 @@ in
 		xorg.xmodmap
 		gnumake
 		glibc
-		tmux
-		i3
 		(writeShellScriptBin "esp-shell" ''
 			nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
 		'')
@@ -55,12 +42,6 @@ in
 	};
 	
 	home.file = {
-		".config/i3" = {
-		    source = "${dotfilesRepo}/dotfiles/i3";
-		};
-		".config/tmux" = {
-		    source = "${dotfilesRepo}/dotfiles/tmux";
-		};
 		"wallpaper" = {
 			source = builtins.fetchGit {
 				url = "https://github.com/bryan-melanson/wallpaper.git";
