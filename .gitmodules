@@ -1,3 +1,6 @@
 [submodule "dotfiles"]
 	path = dotfiles
 	url = https://github.com/bryan-melanson/dotfiles
+[submodule "wallpaper"]
+	path = wallpaper
+	url = git@github.com:bryan-melanson/wallpaper.git

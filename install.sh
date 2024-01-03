@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 
 sudo apt install git curl tmux kitty
-sudo snap install nvim
+
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install nvim
 
 if [ ! -d "$HOME/.oh-my-zsh/" ]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -19,3 +22,5 @@ sudo apt install ./keyring.deb
 echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt update
 sudo apt install i3
+
+cp nix/home.nix ~/.config/home-manager/
