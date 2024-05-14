@@ -7,7 +7,6 @@
 	home.packages = with pkgs; [
 		git
 		curl
-		tmux
 		neovim
 		cmake
 		meson

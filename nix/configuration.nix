@@ -97,6 +97,7 @@
     '';
   };
 
+  programs.tmux.enable = true;
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
