@@ -1,6 +1,7 @@
 { ... }:
 {
 	imports = [
-		./tmux/tmux.nix
+		./tmux/default.nix
+		./git/default.nix
 	];
 }
