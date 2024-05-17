@@ -12,6 +12,7 @@
 		git
 		curl
 		kitty
+		pre-commit
 		neovim
 		cmake
 		meson
