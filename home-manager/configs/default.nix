@@ -4,5 +4,6 @@
 		./tmux
 		./git
 		./zsh
+		./kitty
 	];
 }

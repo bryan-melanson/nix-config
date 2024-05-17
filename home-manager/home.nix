@@ -22,7 +22,6 @@
 		fd
 		gcc
 		feh
-		termite
 		polybar
 		picom
 		firefox
