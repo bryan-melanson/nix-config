@@ -3,6 +3,7 @@
 	imports = [
 		./configs
 	];
+
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
 	home.stateVersion = "23.11"; # Please read the comment before changing.
@@ -39,6 +40,7 @@
 		(writeShellScriptBin "esp-shell" ''
 		 nix --experimental-features 'nix-command flakes' develop github:mirrexagon/nixpkgs-esp-dev#esp32-idf
 		 '')
+		(pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 	];
 
 	home.sessionVariables = {
