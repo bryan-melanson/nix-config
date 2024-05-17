@@ -7,6 +7,7 @@
 	home.packages = with pkgs; [
 		git
 		curl
+		kitty
 		neovim
 		cmake
 		meson

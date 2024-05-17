@@ -5,3 +5,4 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 fi
 
 cp nix/home.nix ~/.config/home-manager/
+cp .Xresources ~/
