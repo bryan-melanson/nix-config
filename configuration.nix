@@ -81,9 +81,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     neovim
      wget
-     git
   ];
 
   programs.zsh.enable = true;
@@ -97,7 +95,6 @@
     '';
   };
 
-  programs.tmux.enable = true;
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.

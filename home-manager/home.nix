@@ -6,7 +6,7 @@
 
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
-	home.stateVersion = "23.11"; # Please read the comment before changing.
+	home.stateVersion = "23.05"; # Please read the comment before changing.
 
 	home.packages = with pkgs; [
 		git
