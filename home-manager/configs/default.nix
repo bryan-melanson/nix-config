@@ -6,6 +6,5 @@
 		./zsh
 		./kitty
 		./nvim
-		./i3
 	];
 }

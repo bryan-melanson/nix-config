@@ -4,6 +4,10 @@
 		./configs
 	];
 
+	xdg.configFile = {
+		"i3/config".text = builtins.readFile ./configs/i3/config;
+	};
+
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
 	home.stateVersion = "23.05"; # Please read the comment before changing.
@@ -13,6 +17,7 @@
 		curl
 		kitty
 		pre-commit
+		polybar
 		neovim
 		cmake
 		meson
@@ -22,7 +27,6 @@
 		fd
 		gcc
 		feh
-		polybar
 		picom
 		firefox
 		rofi
