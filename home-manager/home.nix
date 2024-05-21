@@ -17,7 +17,6 @@
 		curl
 		kitty
 		pre-commit
-		polybar
 		neovim
 		cmake
 		meson
