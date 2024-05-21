@@ -22,6 +22,8 @@
 		meson
 		ninja
 		lazygit
+		rustup
+		zig
 		ripgrep
 		fd
 		gcc
@@ -35,7 +37,6 @@
 		python311
 		python311Packages.pip
 		unzip
-		cargo
 		killall
 		xorg.xmodmap
 		gnumake
