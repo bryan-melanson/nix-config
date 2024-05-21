@@ -16,6 +16,7 @@
 		git
 		curl
 		kitty
+		qemu
 		pre-commit
 		neovim
 		cmake
