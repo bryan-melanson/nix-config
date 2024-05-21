@@ -7,5 +7,6 @@
 		./kitty
 		./nvim
 		./polybar
+		./vscode
 	];
 }
