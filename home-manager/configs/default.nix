@@ -6,7 +6,6 @@
 		./zsh
 		./kitty
 		./nvim
-		./polybar
 		./vscode
 	];
 }

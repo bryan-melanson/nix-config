@@ -6,3 +6,4 @@ fi
 
 cp -r ./home-manager/* ~/.config/home-manager/
 cp .Xresources ~/
+ln -s ./home-manager/configs/i3/config ~/.config/i3/config

@@ -36,8 +36,12 @@
 
   # Enable the Cinnamon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
-
+  services.xserver.windowManager.i3 = {
+  	enable = true;
+	extraPackages = with pkgs; [
+		i3status
+	];
+  };
   # Configure keymap in X11
   services.xserver = {
     layout = "us";

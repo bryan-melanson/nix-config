@@ -4,13 +4,9 @@
 		./configs
 	];
 
-	xdg.configFile = {
-		"i3/config".text = builtins.readFile ./configs/i3/config;
-	};
-
 	home.username = "bryan";
 	home.homeDirectory = "/home/bryan";
-	home.stateVersion = "23.05"; # Please read the comment before changing.
+	home.stateVersion = "23.11"; # Please read the comment before changing.
 
 	home.packages = with pkgs; [
 		git
@@ -67,6 +63,11 @@
 			allowUnfree = true;
 			allowUnfreePredicate = (_: true);
 		};
+	};
+
+	xsession.enable = true;
+	xsession.windowManager.i3 = {
+		enable = true;
 	};
 
 	programs.home-manager.enable = true;
